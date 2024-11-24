@@ -1,0 +1,169 @@
+/*
+    naam:Wouters Tymen
+*/
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px; /* Breedte verkleind */
+    border: 2px solid orange;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1em;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center; /* Voor correcte uitlijning van tekst en afbeeldingen */
+}
+
+nav li img {
+    margin-left: 10px;
+    width: 20px; /* Afbeeldingen kleiner maken */
+    height: 20px;
+}
+
+nav li:first-child {
+    background-color: orange;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid orange;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    border-left: 5px solid orange;
+    padding-left: 10px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+
+main > section {
+    display: grid;
+    grid-template-columns: 60% 40%; /* Nummer 1 neemt 60%, de rest 40% */
+    gap: 20px;
+}
+
+#nummer1 {
+    grid-column: span 2; /* Laat Nummer 1 de volledige breedte nemen */
+}
+
+#nummer2-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Nummer 2 en 3 elk de helft */
+    gap: 20px;
+}
+
+#nummer4-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+    gap: 20px;
+}
+
+article {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+article p {
+    line-height: 1.5em;
+    height: 4.5em; /* Beperkt tekst tot 3 regels */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Voeg "..." toe als tekst wordt afgekapt */
+    margin-top: 10px;
+}
+
+
+figure img {
+    width: 100%;
+    aspect-ratio: 400 / 225; /* Zorg voor een vaste beeldverhouding */
+    object-fit: cover; /* Houd afbeeldingen geschaald */
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: right;
+    color: white;
+    text-shadow: 2px 2px 2px black; /* Schaduw zoals gevraagd */
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #nummer2-3 {
+        grid-template-columns: 1fr; /* Zet Nummer 2 en 3 onder elkaar */
+    }
+
+    #nummer4-6 {
+        grid-template-columns: 1fr; /* Zet alles onder elkaar */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        padding: 5px 0;
+    }
+}
