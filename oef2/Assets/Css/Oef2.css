@@ -1,0 +1,83 @@
+/*
+    naam:Wouters Tymen
+*/
+
+
+/*
+    blauw = #4D6D8F;
+    geel =  #FEFF63;
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+table {
+    width: 600px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead {
+    background-color: #4D6D8F;
+    color: white;
+    font-family: monospace;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    border-bottom: 2px solid black;
+}
+
+.info-cell {
+    text-align: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.info-label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.section-label {
+    background-color: #4D6D8F;
+    color: white;
+    font-weight: bold;
+    text-orientation: mixed;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FEFF63;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.circle-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid gray;
+    object-fit: cover;
+}
+
+.vogel-cell {
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+}
